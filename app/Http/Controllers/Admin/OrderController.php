@@ -39,6 +39,13 @@ class OrderController extends Controller
             'status' => ['required', Rule::in(Order::STATUSES)],
         ]);
 
+        if ($data['status'] === 'cancelled' && $order->status !== 'cancelled') {
+            $order->load('items');
+            foreach ($order->items as $item) {
+                $item->book()->increment('stock', $item->quantity);
+            }
+        }
+
         $order->update(['status' => $data['status']]);
 
         return back()->with('success', "Order #{$order->id} marked as {$data['status']}.");
