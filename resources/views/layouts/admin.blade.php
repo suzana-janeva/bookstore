@@ -13,7 +13,7 @@
     <aside class="fixed inset-y-0 left-0 z-40 w-64 -translate-x-full transform bg-ink text-white transition lg:static lg:translate-x-0"
            :class="sidebar && '!translate-x-0'">
         <div class="flex h-16 items-center gap-1.5 px-6">
-            <span class="text-lg font-extrabold tracking-tight text-white">Suzana's</span>
+            <span class="text-lg font-extrabold tracking-tight text-white">BookStore</span>
             <span class="text-lg font-extrabold tracking-tight text-brand-400">Admin</span>
         </div>
         @php
