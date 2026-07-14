@@ -7,7 +7,7 @@
         </a>
 
         {{-- Search (hidden on small screens) --}}
-        @if($showSearch ?? true)
+        @if(($showSearch ?? true) && ! request()->routeIs('orders.*') && ! request()->routeIs('profile.*'))
             <form action="{{ route('books.index') }}" method="GET" class="hidden flex-1 max-w-md md:block">
                 <div class="relative">
                     <input type="search" name="q" value="{{ request('q') }}"

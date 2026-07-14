@@ -1,23 +1,23 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Profile') }}
-        </h2>
-    </x-slot>
+@extends('layouts.store')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.update-profile-information-form')
-                </div>
+@section('title', 'Profile')
+
+@section('content')
+<div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-extrabold tracking-tight text-ink">Profile</h1>
+
+    <div class="mt-8 space-y-6">
+        <div class="card p-4 sm:p-8">
+            <div class="max-w-xl">
+                @include('profile.partials.update-profile-information-form')
             </div>
+        </div>
 
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.update-password-form')
-                </div>
+        <div class="card p-4 sm:p-8">
+            <div class="max-w-xl">
+                @include('profile.partials.update-password-form')
             </div>
         </div>
     </div>
-</x-app-layout>
+</div>
+@endsection
