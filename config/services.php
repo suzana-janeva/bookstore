@@ -36,8 +36,8 @@ return [
     ],
 
     'stripe' => [
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
+        'key' => 'pk_test_51TrGMCDvDdwS2R22gxZyUwx4kn9X1TbA6cgW773WO07HzsjAp2qt90Le1pgxnE2uyBV04G57qyjLhKpF8LSB3rMi0039CeRcDI',
+        'secret' => 'sk_test_51TrGMCDvDdwS2R22DDb1KHsg7gHKC1iutsGAMu5fQuAVQLXven0R1LFPI1pC08fg4IszA78xbvuwtuW2tBIrI4SK00CJODJXxl',
         'webhook_secret' => env('STRIPE_WEBHOOK_SECRET'),
     ],
 
