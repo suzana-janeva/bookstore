@@ -21,7 +21,7 @@ class Order extends Model
         'total' => 'decimal:2',
     ];
 
-    public const STATUSES = ['pending', 'paid', 'shipped', 'delivered'];
+    public const STATUSES = ['pending', 'paid', 'shipped', 'delivered', 'cancelled'];
 
     public function user()
     {

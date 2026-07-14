@@ -6,6 +6,7 @@
         'paid'      => 'bg-brand-50 text-brand-700',
         'shipped'   => 'bg-blue-50 text-blue-700',
         'delivered' => 'bg-green-50 text-green-700',
+        'cancelled' => 'bg-red-50 text-red-700',
     ][$status] ?? 'bg-gray-100 text-gray-600';
 @endphp
 
